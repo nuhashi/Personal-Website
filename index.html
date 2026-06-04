@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="Hanan, personal website" />
+    <meta name="description" content="Welcome to Hanan Azuhaizat's personal website" />
+    <meta name="author" content="Nur Hanan Azuhaizat" />
+    <title>Home - My Personal Website</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+<div class="banner-container">
+    <img src="banner.png" alt="My Edge to Edge Header Banner" />
+</div>
+<div class="greeting-container">
+    <h2 id="dynamic-greeting">Welcome to my website!</h2>
+</div>
+<body>
+
+<img src="flower.png" id="left-flower-1" alt="Left Flower Top" />
+<img src="flower sec.png" id="left-flower-2" alt="Left Flower Middle" />
+<img src="flower third.png" id="left-flower-3" alt="Left Flower Below" />
+
+<img src="flower forth.png" id="right-flower-1" alt="Right Flower Top" />
+<img src="flower fifth.png" id="right-flower-2" alt="Right Flower Middle" />
+<img src="flower sixth.png" id="right-flower-3" alt="Right Flower Below" />
+
+<h3 id="dynamic-greeting" style="text-align: center; color: #800020;"></h3>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function setGreeting() {
+    var now = new Date();
+    var hour = now.getHours();
+    var greetingText;
+
+    if (hour < 12) {
+        greetingText = "&#127774; Good Morning!";
+    } else if (hour < 19) {
+        greetingText = "&#9925; Good Evening!";
+    } else {
+        greetingText = "&#127769; Good Night!";
+    }
+
+    document.getElementById("dynamic-greeting").innerHTML = greetingText;
+}
+// Run the function immediately when the page loads
+setGreeting();
+//]]>
+</script>
+
+<body>
+
+<h1 style="text-align: center; color: #800020;">&#10024;Welcome to My Little World</h1>
+
+
+<nav class="nav-container-stacked">
+    <a href="index.html" class="home-btn-top">Home</a>
+
+    <div class="split-columns-wrapper">
+        <div class="nav-column">
+            <a href="about.html">About Me</a>
+            <a href="family.html">My Family</a>
+            <a href="friends.html">My Friends</a>
+        </div>
+
+        <div class="nav-column">
+            <a href="interests.html">Interest</a>
+            <a href="entertainment.html">Entertainment</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+</nav>
+
+    <header class="main-header">
+        <p>Thank you for visiting my personal website. Have fun!</p>
+        <p class="subtitle">Let's explore into my chaotic life!</p>
+    </header>
+
+
+<!-- The placeholder where the live clock will display -->
+<div class="clock-display">
+    <p>Current Date &amp; Time: <span id="datetime">Loading...</span></p>
+</div>
+
+<!-- The JavaScript Code -->
+<script type="text/javascript">
+//<![CDATA[
+function updateDateTime() {
+    var now = new Date();
+    
+    // Formats the date neatly (e.g., June 2, 2026)
+    var dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
+    var currentDate = now.toLocaleDateString('en-US', dateOptions);
+    
+    // Formats the time cleanly (e.g., 1:42:14 PM)
+    var currentTime = now.toLocaleTimeString('en-US');
+    
+    // Combines them and updates the text on the screen
+    document.getElementById('datetime').innerHTML = currentDate + " | " + currentTime;
+}
+
+// Runs the clock immediately, then tells it to tick and update every 1 second
+updateDateTime();
+setInterval(updateDateTime, 1000);
+//]]>
+</script>
+
+<p style="color: #800020; font-size: 16px; font-weight: bold; margin-top: 10px; opacity: 0.8;">
+    Best viewed in Chrome, 1920x1080 resolution. Last updated: May 2026.
+</p>
+
+    </main>
+
+</body>
+</html>
